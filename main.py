@@ -50,20 +50,3 @@ def signup():
 
 if __name__== '__main__':
     app.run(debug=True)
-
-
-
-
-
-
-# To-Do Breakdown:
-
-# Flask-mail to newsletter
-# Notify via email (weekly)
-# make a subscription service web app
-    # working db
-    # no new page but JS for /signup?
-    # Add WTFforms instead?
-    # working form to db
-# posters?
-# implement unsubscribe

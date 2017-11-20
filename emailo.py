@@ -9,7 +9,7 @@ import codecs
 newsletter_html_with_content = find_movies_with_genre('Your_API_Key', 878)
 
 sender = "youremail@gmail.com"
-recipient = "subscriber@gmail.com, othersubscriber@live.it"
+recipient = "subscriber@gmail.com, othersubscriber@gmail.it"
 
 # Create message container
 msg = MIMEMultipart('alternative')
