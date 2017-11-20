@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" type="image/png" href=""/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link href="static/narrow-jumbotron.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/narrow-jumbotron.css" rel="stylesheet">
+
+  <title>SciFi_Galore</title>
+</head>
+
+<main role="main">
+<div class="jumbotron" style="background-image: url(static/imgs/background.png); background-size: cover; background-position: center; opacity: 9">
+  <h1 class="display-3">SciFi_Galore</h1>
+  <p class="lead">Want some scifi?</p>
+  <p><a class="btn btn-lg btn-success" href="#" id="signup" role="button">Sign up today</a></p>
+</div>
+</main>
+
+
+<!-- Allowing messages to be flashed in an alertbox -->
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <script>
+      var messages = {{ messages | safe }};
+      for (var i=0; i < messages.length; i++) {
+        alert(messages[i]);
+      }
+    </script>
+  {% endif %}
+{% endwith %}
+
+
+{% block content %}
+{% endblock %}
+
+</div>
+
+<!-- JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function () {
+        $("#signup").click(function () {
+            $("#signup-div").slideToggle();
+              $("#movies").slideToggle();
+
+            });
+
+        });
+</script>
+
+
+</body>
+</html>

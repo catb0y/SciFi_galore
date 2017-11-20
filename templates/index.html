@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+  <!-- Here are the latest sci-fi movies! -->
+<main role="main" class="container" align="center" id="movies">
+  {% for item in now_playing['results'] %}
+    {% if 878 in item['genre_ids']:%}
+      <h4>{{ item['original_title'] }}</h4>
+  {% endif %}
+{% endfor %}
+</main>
+
+<div class="intro-header" id="signup-div" style="display:none">
+<div class="container"  align="center">
+
+<div class="tab-content custom-tab-content" align="center">
+<div class="subscribe-panel">
+<p>Subscribe to receive our monthly newsletter with all the latest sci-fi movies.</p>
+
+                <form action="/signup" method="post">
+
+							<div class="col-md-4"></div>
+							<div class="col-md-4">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+									<input type="text" class="form-control input-lg" name="email" id="email"  placeholder="Enter your Email"/>
+								</div>
+							</div>
+							<div class="col-md-4"></div>
+              <br />
+                    <button class="btn btn-warning btn-lg">Subscribe</button>
+              </form>
+
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
